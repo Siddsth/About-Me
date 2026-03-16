@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Self Introduction Webpage
+A personal self-introduction webpage built with Next.js.
 
-## Getting Started
+Project Overview
+This project is built on the default Next.js boilerplate. Core files such as globals.css have not been modified. All custom changes are contained within the app/ folder and the default page.tsx. The only modification made to a core file is in layout.tsx, where the Navbar component was implemented so it appears across all pages.
 
-This is a test for githuib desktop working on windows
+Project Structure
+app/
+├── layout.tsx          → Core layout file (Navbar added here)
+├── page.tsx            → Home page (About Me)
+├── globals.css         → Global styles (unchanged)
+├── experience/
+│   └── page.tsx        → Experience page
+├── Contact/
+│   └── page.tsx        → Contact page
+└── components/
+    └── Navbar.tsx      → Navbar component
 
-First, run the development server:
+Navbar
+The Navbar is implemented inside layout.tsx so it persists across all pages without needing to be imported individually into each one.
+The Navbar has three parts:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Name Text — Displays the developer's name on the left side of the navbar
+Drop Menu — A collapsible navigation menu containing links to all three pages (Home, Experience, Contact)
+Toggle Button (☰) — A hamburger button on the right that opens and closes the drop menu
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pages
+1. Home — app/page.tsx
+The default landing page. Contains a personal self-introduction with an About Me heading and a brief paragraph about the developer.
+2. Experience — app/experience/page.tsx
+A dedicated page displaying professional experience, internships, and project work.
+3. Contact — app/Contact/page.tsx
+A contact information page with links to GitHub, LinkedIn, and email.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Getting Started
+Install dependencies:
+bashnpm install
+Run the development server:
+bashnpm run dev
+Open http://localhost:3000 in your browser to view the project.
 
-## Learn More
+Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js
+Tailwind CSS
+React Icons
